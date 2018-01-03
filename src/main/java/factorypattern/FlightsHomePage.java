@@ -15,8 +15,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,8 +37,7 @@ public class FlightsHomePage{
 
 	@BeforeClass(description = "Start browser")
 	public void startBrowser() {
-		driver=DriverFactory.getBrowserInstance("Chrome");
-		System.out.println("BROWSER****************************************");
+		driver=DriverFactory.getBrowserInstance("Chrome");		
 		driver.get(START_URL);
 		driver.manage().window().maximize();
 		waitForPageToLoad();
